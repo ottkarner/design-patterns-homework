@@ -10,6 +10,7 @@ public class LinksRetrieverFactory {
         if (linksRetrieverType.equalsIgnoreCase("RIIGI_TEATAJA_EE_SELENIDE")) {
             return new RiigiTeatajaEeQueryLinksRetrieverBySelenide();
         }
+
         return null;
     }
 
