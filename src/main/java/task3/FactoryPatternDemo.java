@@ -3,7 +3,6 @@ package task3;
 public class FactoryPatternDemo {
 
     public static void main(String[] args) {
-
         LinksRetrieverFactory linksRetrieverFactory = new LinksRetrieverFactory();
 
         LinksRetriever linksRetriever1 = linksRetrieverFactory.getLinksRetriever("RIIGI_TEATAJA_EE_JSOUP");
@@ -17,7 +16,6 @@ public class FactoryPatternDemo {
                 "tervikteksti_tulemused.html?sakk=kehtivad_kehtetuteta&kov=true&nrOtsing=tapne&valj1=Kose+Vallavolikogu")) {
             System.out.println(link);
         }
-
     }
 
 }

@@ -8,14 +8,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RiigiTeatajaEeQueryLinksRetrieverByJSOUP implements LinksRetriever {
+public class RiigiTeatajaEeQueryLinksRetrieverByJsoup implements LinksRetriever {
+
     @Override
     public List<String> retrieveLinks(String url) {
         List<String> riigiTeatajaLinks = new ArrayList<>();
 
         try {
             Document document = Jsoup.connect(url).get();
-            for (Element element : document.select(".data > tbody > tr > td:nth-child(1)")) {
+            for (Element element : document.select(".data tbody a")) {
                 riigiTeatajaLinks.add(element.text());
             }
         } catch (IOException e) {
@@ -24,4 +25,5 @@ public class RiigiTeatajaEeQueryLinksRetrieverByJSOUP implements LinksRetriever 
 
         return riigiTeatajaLinks;
     }
+
 }
