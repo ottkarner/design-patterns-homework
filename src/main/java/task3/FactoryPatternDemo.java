@@ -12,18 +12,11 @@ public class FactoryPatternDemo {
             System.out.println(link);
         }
 
-        LinksRetriever linksRetriever2 = linksRetrieverFactory.getLinksRetriever("RIIGI_TEATAJA_EE_JSOUP");
+        LinksRetriever linksRetriever2 = linksRetrieverFactory.getLinksRetriever("RIIGI_TEATAJA_EE_SELENIDE");
         for (String link : linksRetriever2.retrieveLinks("https://www.riigiteataja.ee/" +
                 "tervikteksti_tulemused.html?sakk=kehtivad_kehtetuteta&kov=true&nrOtsing=tapne&valj1=Kose+Vallavolikogu")) {
             System.out.println(link);
         }
-
-/*        LinksRetriever linksRetriever3 = linksRetrieverFactory.getLinksRetriever("RIIGI_TEATAJA_EE_SELENIDE");
-        for (String link : linksRetriever3.retrieveLinks(
-                "https://www.riigiteataja.ee/tervikteksti_tulemused.html?" +
-                        "sakk=kehtivad_kehtetuteta&kov=true&nrOtsing=tapne&valj1=Kose+Vallavolikogu")) {
-            System.out.println(link);
-        }*/
 
     }
 
